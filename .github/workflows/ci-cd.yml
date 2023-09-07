@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+      
+permissions:
+    contents: write    
 
 jobs:
   build:
@@ -26,3 +29,8 @@ jobs:
 
       - name: Build Angular app
         run: npm run build-production
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./dist/contacts-book
