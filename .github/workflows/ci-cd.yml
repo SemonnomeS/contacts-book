@@ -9,20 +9,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 16.x, 18.x]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+        node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
         run: npm install
 
       - name: Run Angular tests
-        run: npm run test
+        run: npm test -- --watch=false --browsers=ChromeHeadless
 
       - name: Build Angular app
         run: npm run build-production
