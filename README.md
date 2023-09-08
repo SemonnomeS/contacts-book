@@ -1,6 +1,6 @@
 # My Contacts Book App
 
-This is a sample README file for my Contacts Book Angular application. Below, I'll provide information about the CI/CD pipeline I've set up to build, test, and deploy my application.
+This is a README file for my Contacts Book Angular application. Below, I'll provide information about the CI/CD pipeline I've set up to build, test, and deploy my application.
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
 
