@@ -1,0 +1,43 @@
+<form class="form" [formGroup]="newContactForm">
+  <div class="heading">
+    <button type="button" class="btn btn-outline-dark" (click)="close()">Close</button>
+    <button type="button" class="btn btn-outline-dark" (click)="submit()">Save</button>
+  </div>
+  <hr />
+  <div class="body">
+    <div class="error pb-3" *ngIf="!this.newContactForm.valid && this.newContactForm.touched">
+      Make sure to fill all input fields!
+    </div>
+
+    <div class="mb-3 row">
+      <label class="col-sm-3 col-form-label">First name:</label>
+      <div class="col">
+        <input type="text" class="form-control" [formControlName]="'firstName'" />
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-3 col-form-label">Last name:</label>
+      <div class="col">
+        <input type="text" class="form-control" [formControlName]="'lastName'" />
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-3 col-form-label">Phone</label>
+      <div class="col">
+        <input type="text" class="form-control" [formControlName]="'phone'" />
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-3 col-form-label">Email:</label>
+      <div class="col">
+        <input type="text" class="form-control" [formControlName]="'email'" />
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-3 col-form-label">Address:</label>
+      <div class="col">
+        <input type="text" class="form-control" [formControlName]="'address'" />
+      </div>
+    </div>
+  </div>
+</form>

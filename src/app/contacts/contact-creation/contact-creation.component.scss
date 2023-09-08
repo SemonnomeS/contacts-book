@@ -1,0 +1,15 @@
+.form {
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px 0 15px;
+  }
+
+  .body {
+    padding: 20px;
+
+    .error {
+      color: red;
+    }
+  }
+}
