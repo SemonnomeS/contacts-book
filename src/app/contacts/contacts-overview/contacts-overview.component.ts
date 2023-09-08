@@ -29,6 +29,10 @@ export class ContactsOverviewComponent {
 
   constructor(private newContactService: NewContactService) {}
 
+  openContactDetail(index: number) {
+    console.log(this.contacts[index])
+  }
+
   addNewContact() {
     this.newContactService.addNewContact()
   }
